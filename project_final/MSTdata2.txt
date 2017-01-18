@@ -1,0 +1,18 @@
+Antioch-Oakley:8.23
+Antioch-Walnut Creek:25.10
+Oakley-Walnut Creek:32.45
+Concord-Berkeley:24.30
+Berkeley-Richmond:9.72
+Richmond-Concord:28.19
+Pleasanton-San Ramon:15.93
+Pleasanton-Brentwood:33.87
+Brentwood-Antioch:12.62
+Oakley-Arbor:4.07
+Berkeley-Oakland:7.49
+Oakland-San Leandro:13.44
+San Leandro-San Ramon:16.83
+Hayward-Pleasanton:18.18
+Oakland-Walnut Creek:21.59
+Pleasanton-Livermore:9.64
+Livermore-Antioch:36.11
+Livermore-Brentwood:28.54

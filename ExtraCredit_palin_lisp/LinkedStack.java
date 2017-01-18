@@ -1,0 +1,11 @@
+package ExtraCredit_palin_lisp;/**   A class of stacks whose entries are stored in a chain of nodes.   @author Frank M. Carrano   @author Timothy M. Henry   @version 4.0
+   UPDATED by C. Lee-Klawender *//* * Name of program - LinkedStack.javaStudent name - Nianthrini VivekanandanCurrent Date - 04/17/2016Computer operating system and compiler you are using - MAC OS X Version 10.9.5; JAVA SE-1.7; ECLIPSE Version: Mars.2 Release (4.5.2)PROGRAM DESCRIPTION -A class of stacks whose entries are stored in a chain of nodes. */public class LinkedStack<T> implements StackInterface<T>{	private Node topNode; // References the first node in the chain
+	// ADD A PRIVATE INT FOR COUNTER THAT INDICATES HOW MANY NODES ARE IN THE STACK	private int size = 0;//no need to initialize it to 0 as the default is 0	public LinkedStack()	{		topNode = null;	} // end default constructor	public boolean push(T newEntry)	{		topNode = new Node(newEntry, topNode);
+		// ADD CODE SO THE COUNTER IS CORRECT		size++;		return true;	} // end push	public T peek()	{		if (isEmpty())			return null;		else			return topNode.getData();	} // end peek	public T pop()	{		T top = peek();		if(topNode != null)
+		{			topNode = topNode.getNextNode();
+			// ADD CODE SO THE COUNTER IS CORRECT			size--;
+		}		return top;	} // end pop	public boolean isEmpty()	{		// FINISH FOR EXERCISE 2.2		if(size == 0)			return true;		else			return false;	} // end isEmpty
+	//  WRITE THE "MISSING" METHOD, REQUIRED FOR THIS CLASS SO IT'S NOT ABSTRACT (also Ex. 2.2):
+	public int size()	{		return size;	}
+
+	private class Node	{		private T    data; // Entry in stack		private Node next; // Link to next node		private Node(T dataPortion)		{			this(dataPortion, null);		} // end constructor		private Node(T dataPortion, Node linkPortion)		{			data = dataPortion;			next = linkPortion;		} // end constructor		private T getData()		{			return data;		} // end getData		private void setData(T newData)		{			data = newData;		} // end setData		private Node getNextNode()		{			return next;		} // end getNextNode		private void setNextNode(Node nextNode)		{			next = nextNode;		} // end setNextNode	} // end Node} // end LinkedStack
